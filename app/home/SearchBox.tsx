@@ -48,11 +48,18 @@ const SearchBox = () => {
   };
 
   return (
-    <div className='mb-20 mx-10 bg-gray-400 rounded'>
+    <div className='mb-20 mx-10 bg-gray-400 rounded-full'>
       <div className='flex'>
+        <div className='ml-2 mt-3'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+        </svg>
 
-        <input className='bg-gray-400 rounded py-3 w-full px-2 text-truncate overflow-hidden'
-          placeholder="Address"
+        </div>
+
+
+        <input className='bg-gray-400 rounded-full py-3 w-full px-2 text-truncate overflow-hidden  focus:outline-none'
+          placeholder="Where do you work?..."
           {...address}
           isTyping={address.value !== ""}
         />
@@ -66,7 +73,7 @@ const SearchBox = () => {
       </div>
       <div>
       {address.suggestions?.length > 0 && (
-        <div className='bg-gray-400 px-2 py-3 w-full'>
+        <div className='bg-gray-400 px-2 pb-3 w-full pt-20 mt-[-3rem] rounded-t-md'>
           {address.suggestions.map((suggestion, index) => {
             return (
               <div className='py-1 flex'
@@ -83,7 +90,7 @@ const SearchBox = () => {
                 <p className='truncate overflow-hidden'>{suggestion.place_name}</p>
               </div>
             );
-          })};
+          })}
         </div>
       )}
       </div>

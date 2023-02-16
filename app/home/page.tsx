@@ -9,7 +9,7 @@ function Yopage() {
 
     
         
-        <div className='flex justify-center items-center lg:p-5'>
+        <div className='flex justify-center items-center lg:p-5 bg-geo bg-[#09090b]'>
         <div className="absolute items-center justify-center w-full z-10 p-4 max-w-3xl">
         <h1 className='font-bold text-xl text-black'>Where do you work?</h1>
         <div className='absolute w-full'>

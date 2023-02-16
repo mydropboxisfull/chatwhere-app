@@ -6,7 +6,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {backgroundImage: {
+      'geo': "url('https://www.transparenttextures.com/patterns/inspiration-geometry.png')",
+    },},
   },
   plugins: [],
 }
