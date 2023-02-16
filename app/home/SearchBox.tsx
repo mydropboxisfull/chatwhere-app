@@ -25,8 +25,8 @@ const SearchBox = () => {
     const latitude = (userLocSelected[2]).toFixed(4);
     const longitude = (userLocSelected[1]).toFixed(4);
 
-    // router.push(`/?channelName=${channelName}&latitude=${latitude}&longitude=${longitude}`);
-          router.push(`/`);
+    router.push(`/auth/signin?channelName=${channelName}&latitude=${latitude}&longitude=${longitude}`);
+          // router.push(`/auth/signin`);
 
     // try {
     //   router.push(`/`);

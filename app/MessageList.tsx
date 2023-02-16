@@ -10,7 +10,6 @@ import { clientPusher } from '../pusher';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import ReactMapGL, {Marker, Popup, ViewState} from 'react-map-gl';
-import Map from 'react-map-gl';
 import { useSearchParams } from 'next/navigation';
 import "mapbox-gl/dist/mapbox-gl.css";
 
