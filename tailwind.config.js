@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {backgroundImage: {
-      'geo': "url('https://www.transparenttextures.com/patterns/inspiration-geometry.png')",
+      'geo': "url('../public/earth.jpg')",
     },},
   },
   plugins: [],

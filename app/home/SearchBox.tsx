@@ -3,14 +3,23 @@
 import { useState } from 'react'
 import UseInput from "./UseInput";
 import { useRouter } from 'next/navigation';
+import Typewriter from './Typewriter'
+
+
+
+
 
 
 
 
 const SearchBox = () => {
+  const words = ['Walmart Tennessee 3950 Austin P...', 'Publix Florida 10500 Ulmerto...', 'Target Minnesota 900 Nicollet...', 'Best Buy North Dakota 2800 S...', 'Olive Garden Virginia 1603 W...', 'Taco Bell California 1234 Elm St...'];
+
   
   const router = useRouter();
   const address = UseInput("");
+  const [isInputFocused, setIsInputFocused] = useState(false);
+
   
   
   
@@ -48,6 +57,13 @@ const SearchBox = () => {
   };
 
   return (
+
+    <div>
+
+
+{!isInputFocused && <Typewriter words={words} />}
+
+    
     <div className='mb-20 mx-10 bg-gray-400 rounded-full'>
       <div className='flex'>
         <div className='ml-2 mt-3'>
@@ -58,10 +74,13 @@ const SearchBox = () => {
         </div>
 
 
+
         <input className='bg-gray-400 rounded-full py-3 w-full px-2 text-truncate overflow-hidden  focus:outline-none'
           placeholder="Where do you work?..."
           {...address}
           isTyping={address.value !== ""}
+          onFocus={() => setIsInputFocused(true)}
+          onBlur={() => setIsInputFocused(false)}
         />
 
         {/* <button type="submit" href="/" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 scale-[.9]">
@@ -94,6 +113,7 @@ const SearchBox = () => {
         </div>
       )}
       </div>
+    </div>
     </div>
   );
 };

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-shadow {
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 255, 255, 0.3), 0 0 23px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3), 0 0 42px rgba(255, 255, 255, 0.25), 0 0 55px rgba(255, 255, 255, 0.2), 0 0 70px rgba(255, 255, 255, 0.1);
+  }
+  
